@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Web App - Simple Interest Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Simple Interest Calculator</h1>
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" placeholder="Enter Principal Amount" />
+      <br />
+      <label for="rate">Interest Rate</label>
+      <input
+        id="rate"
+        type="range"
+        min="1"
+        max="20"
+        value="0"
+        step="1"
+        onChange="change();"
+      />
+      <span id="result"></span>
+      <script>
+        var result = document.getElementById("result");
+        var rate = document.getElementById("rate");
+
+        function change() {
+          result.innerText = rate.value+"%";
+        }
+      </script>
+      <br />
+      <label for="time">No of Years</label>
+      <input type="number" id="time" />
+      <br />
+      <span id="result"></span><br />
+
+      <button onclick="compute()">Compute Interest</button>
+
+      <p>If you deposit : <span id="output_1"></span></p>
+      <p>at an interest rate of : <span id="output_4"></span></p>
+      <p>You will receive an interest of : <span id="output_2"></span></p>
+      <p>And your total amount is : <span id="output_3"></span></p>
+      <p>in the year : <span id="output_5"></span></p>
+      <h3>&#169; Everyone Can Get Rich</h3>
+    </div>
+  </body>
+</html>
